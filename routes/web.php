@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::name('website.')->group(function () {
+
+    Route::get('/', [CustomController::class, 'index'])->name('index');
+    
+    Route::get('/dang-nhap', [CustomController::class, 'login'])->name('login');
+    Route::post('/dang-nhap', [CustomController::class, 'postlogin'])->name('postlogin'); 
+
+    Route::get('/dang-ky', [CustomController::class, 'create'])->name('create');
+    Route::post('/store', [CustomController::class, 'store'])->name('store'); 
+
+    Route::get('/dang-xuat', [CustomController::class, 'logout'])->name('logout');
+});
+
+
