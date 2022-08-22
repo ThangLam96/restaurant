@@ -4573,3 +4573,10 @@ h5 {
 .li-follow{
 	margin-right: 10px;
 }
+
+.icon
+{
+  height: 15px;
+  margin: 5px;
+  text-transform: uppercase;
+}

@@ -23,7 +23,7 @@ class CustomController extends Controller
      */
     public function create()
     {
-        return view('website.page.resgister');
+        return view('website.modules.register');
     }
 
     /**

@@ -27,7 +27,7 @@ Route::name('website.')->group(function () {
     Route::get('/dang-ky', [CustomController::class, 'create'])->name('create');
     Route::post('/store', [CustomController::class, 'store'])->name('store'); 
 
-    Route::get('/dang-xuat', [CustomController::class, 'logout'])->name('logout');
+    Route::get('logout', [CustomController::class, 'logout'])->name('logout');
 });
 
 
